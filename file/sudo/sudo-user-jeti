@@ -1,0 +1,3 @@
+Cmnd_Alias JETICMD=/usr/bin/,/usr/local/bin,/usr/sbin,/bin/
+User_Alias JETIADMIN=jeti
+JETIADMIN ALL = (ALL) NOPASSWD: JETICMD
