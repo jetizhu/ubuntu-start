@@ -185,6 +185,25 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+
+
+   <keybind key="F2">
+     <action name="Execute">
+       <command>amixer set Master 5%+ unmute</command>
+     </action>
+   </keybind>
+   <keybind key="F3">
+     <action name="Execute">
+       <command>amixer set Master 5%- unmute</command>
+     </action>
+   </keybind>
+   <keybind key="F7">
+     <action name="Execute">
+       <command>amixer set Master toggle</command>
+     </action>
+   </keybind>
+
+
     <keybind key="C-A-Right">
       <action name="GoToDesktop">
         <to>right</to>
