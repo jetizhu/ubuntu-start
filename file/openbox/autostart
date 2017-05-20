@@ -1,2 +1,3 @@
 xscreensaver &
 ibus-daemon --xim &
+synclient TouchpadOff=1
