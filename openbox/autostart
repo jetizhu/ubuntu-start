@@ -1,3 +1,5 @@
 xscreensaver &
-ibus-daemon --xim &
+fcitx
 synclient TouchpadOff=1
+cd ~
+git pull
