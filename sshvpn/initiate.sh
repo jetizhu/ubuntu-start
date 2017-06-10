@@ -4,7 +4,7 @@
 
 # the remote server user
 # ip and path to setup script
-TARGET_USER="root"
+TARGET_USER="jeti"
 TARGET=$1
 
 # what is the local network we want the remote host to route to us
