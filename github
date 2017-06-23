@@ -1,0 +1,6 @@
+#!/sbin/bash
+date=`date +%Y%m%d%H%m`
+cd ~/ubuntu-start
+git pull
+git add --all
+git commit -am "$date"
