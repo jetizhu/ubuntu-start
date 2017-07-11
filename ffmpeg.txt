@@ -1,0 +1,1 @@
+ffmpeg -i aivici.mp4  -framerate 30000/1001 -loop 1 -i 193331714.png  -filter_complex "[1:v] fade=out:st=30:d=1:alpha=1 [ov]; [0:v][ov] overlay=10:10 [v]" -map "[v]" -map 0:a -c:v libx264 -c:a copy -shortest Bigout.mp4
