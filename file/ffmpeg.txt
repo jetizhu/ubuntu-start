@@ -14,4 +14,17 @@ ffmpeg -i pair.mp4 -i logo.png -filter_complex overlay=0:H-h  pair2.mp4
 
 ffmpeg -i pair.mp4 -i logo.png -filter_complex overlay=W-w:H-h  pair2.mp4
 
+添加背景音乐
 
+ffmpeg -y -i input.mp4 -i ainiyiwannian.wav -filter_complex "[0:a] pan=stereo|c0=1*c0|c1=1*c1 [a1], [1:a] pan=stereo|c0=1*c0|c1=1*c1 [a2],[a1][a2]amix=duration=first,pan=stereo|c0<c0+c1|c1<c2+c3,pan=mono|c0=c0+c1[a]" -map "[a]" -map 0:v -c:v libx264 -c:a aac -strict -2 -ac 2 output.mp4
+
+将视频去除音频
+
+ffmpeg -y -i source.mp4 -an -vcodec copy output.mp4
+
+设置视频的音量
+-vol 设置视频的音量，是以%为单位，500表示500%
+[code]ffmpeg -y -i source.mp4 -vol 500 -strict -2 -vcodec copy output.mp4
+
+从视频中提取音频
+ffmpeg -y -i source.mp4 -vn output.wav
