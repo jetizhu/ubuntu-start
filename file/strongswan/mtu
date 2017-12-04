@@ -1,0 +1,6 @@
+$ iptables -t mangle -A FORWARD -o eth0 \
+ -p tcp -m tcp --tcp-flags SYN,RST SYN \
+ -m tcpmss --mss 1361:1536 \
+ -j TCPMSS --set-mss 1360
+
+$ echo 1 >/proc/sys/net/ipv4/ip_no_pmtu_disc
