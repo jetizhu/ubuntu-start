@@ -1,0 +1,5 @@
+set security ike traceoptions file ike-debug
+set security ike traceoptions flag all
+set security ipsec traceoptions flag all
+commit
+run show log ike-debug | match ike
