@@ -1,0 +1,4 @@
+sudo gitlab-rails console
+s = ApplicationSetting.find_by(password_authentication_enabled_for_web: false)
+s.password_authentication_enabled_for_web = true
+s.save
