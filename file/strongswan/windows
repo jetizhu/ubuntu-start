@@ -1,0 +1,6 @@
+注意必须是Local Computer（本地计算机）而非Current User（当前用户），否则添加的证书不会起效。
+连接的时候提示 "错误 13801"
+serverfault.com 找到了解决方案  
+开始->运行 输入 regedit
+进入 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\RasMan\Parameters
+在右侧新建DWORD项 命名为 DisableIKENameEkuCheck，然后值设置成 1
