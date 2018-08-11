@@ -1,0 +1,4 @@
+yum whatprovides libc.so.6 //通过文件查询依赖包
+yum repolist all | grep mysql //查询源版本情况
+yum-config-manager --enable mysql57-community
+yum-config-manager --disable mysql80-community
