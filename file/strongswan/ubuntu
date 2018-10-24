@@ -1,1 +1,14 @@
 apt-get install libssl-dev libpam0g-dev gawk -y
+
+conn emrc
+    auto=start
+    dpdaction=clear
+    keyexchange=ikev2
+    left=%any
+    leftsourceip=%config
+    leftauth=psk
+    leftid=jeti-pc.ipsec.client
+    right=vpn.emrc.club
+    rightauth=psk
+    rightid=emrc.ipsec.server
+    rightsubnet=172.31.188.41/32
