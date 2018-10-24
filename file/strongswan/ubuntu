@@ -12,3 +12,5 @@ conn emrc
     rightauth=psk
     rightid=emrc.ipsec.server
     rightsubnet=172.31.188.41/32
+
+libstrongswan libstrongswan-standard-plugins strongswan strongswan-charon strongswan-ike strongswan-ikev1 strongswan-ikev2 strongswan-libcharon strongswan-plugin-eap-md5 strongswan-plugin-eap-mschapv2 strongswan-starter strongswan-tnc-base
