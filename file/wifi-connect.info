@@ -1,1 +1,4 @@
 nmcli connection up Jeti-Phone
+nmcli device wifi rescan
+nmcli device wifi list
+nmcli device wifi connect GeeWell password \#geewll@*** //符号要转义
